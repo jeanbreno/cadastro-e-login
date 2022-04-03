@@ -64,24 +64,19 @@
 	<body>
         <!-- Top content -->
         <div class="top-content">
-        	
             <div class="inner-bg">
                 <div class="container">
-                     <c:if test="${not empty mensagem}">
-						<div class="alert success">
-						  	<span class="closebtn">&times;</span>  
-						  	<strong>Confirmação!</strong> ${mensagem}
-						</div>
-					</c:if>
-                	
+						
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
                             
                             <div class="description">
                             	<p>
-	                            	TP3 apresentado a disciplica <strong>Desenvolvimento Web com Java</strong>, professor Elberth. 
-	                            	Repositório do projeto: <a href="https://github.com/jeanbreno/" target="_blank"><strong>PROJETO</strong></a>.
-	                            	
+                            		Desenvolvido por Jean Breno.
+                            		<br>
+	                            	TP3 apresentado a disciplica <strong>Desenvolvimento Web com Java</strong>, professor Elberth.
+	                            	<br>
+	                            	Repositório do projeto: <a href="https://github.com/jeanbreno/cadastro-e-login" target="_blank"><strong>Projeto Cadastro-Login</strong></a>.
                             	</p>
                             </div>
                         </div>
@@ -112,7 +107,7 @@
 				                        	<label class="sr-only" for="form-last-name">Senha</label>
 				                        	<input type="password" name="senha" placeholder="Senha..." class="form-last-name form-control" id="password" value="123">
 				                        </div>
-				                        <button type="submit" class="btn">Cadastrar!</button>
+				                        <button type="submit" class="btn" onclick="myFunction()">Cadastrar!</button>
 				                    </form>
 			                    </div>
                         	</div>
@@ -151,17 +146,10 @@
 	            <script src="assets/js/placeholder.js"></script>
 	        <![endif]-->
 	        
-	        <script>
-				var close = document.getElementsByClassName("closebtn");
-				var i;
-				
-				for (i = 0; i < close.length; i++) {
-				  close[i].onclick = function(){
-				    var div = this.parentElement;
-				    div.style.opacity = "0";
-				    setTimeout(function(){ div.style.display = "none"; }, 600);
-				  }
-				}
+		<script>
+			function myFunction() {
+			  alert("Usuário cadastrado!");
+			}
 		</script>
        </body>
 </html>

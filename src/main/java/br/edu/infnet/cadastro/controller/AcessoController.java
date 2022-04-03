@@ -59,12 +59,9 @@ public class AcessoController {
 			//request.getRequestDispatcher("produto/lista.jsp").forward(request, response);
 			//return "redirect:/";
 			//return telaHome();
-			return "redirect:/home";
+			return "redirect:https://github.com/jeanbreno/cadastro-e-login";
 		} else {
-			model.addAttribute(
-					"mensagem", 
-					"Credenciais incorretas!"
-				);
+			model.addAttribute("credencialErro", "Credenciais incorretas!");
 
 			//return telaLogin();
 			return telaLogin();

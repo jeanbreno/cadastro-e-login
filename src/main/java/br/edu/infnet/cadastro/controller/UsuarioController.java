@@ -32,8 +32,7 @@ public class UsuarioController {
 	@PostMapping(value = "/usuario/incluir")
 	public String incluir(Usuario usuario, Model model){
 		usuarioService.incluir(usuario);
-		model.addAttribute("mensagem", "["+usuario.getId()+"] Usuário " + usuario.getNome() + " cadastrado!");
-		return telaCadastro(); 
+		return "redirect:/";
 	}
 
 	@GetMapping(value = "/usuario/{id}/excluir")
